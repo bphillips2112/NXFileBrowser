@@ -287,14 +287,8 @@ while b:
                         print("No nexus file initialized")
 
         elif command == "exit":
-                # try:
-                #         if remote_nx:
-                #                 remote_nx._file._pyroRelease()
-                #         Browser.exit(0)
                 b=False
-                # except Exception as e:
-                #         print(f"error shutting down server: {type(e)} - {e}")
-                #         sys.exit()
+                
         else:
                 print("Unknown command.")
 
