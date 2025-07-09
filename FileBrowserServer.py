@@ -217,12 +217,15 @@ class fileBrowser(object):
         
         def delitem(self, name, path):
                 try:
+                        nxfile = self.root[name]
                         del self.root[name][path]
-                        with self.root[name].nxfile as f:
-                                f.nxpath = path
-                                del f[path]
+                        if path in nxfile:
+                                del nxfile[path]
+                                return f"delelted '{path}' from '{name}'"
+                        else:
+                                return f"Path '{path}' not found in '{name}'"
 
-                        return f"deleted {path}"
+                        #return f"deleted {path}"
                 except Exception as e:
                         print(f"Error deleting: {type(e)} - {e}")
                         return f"Error deleting: {type(e)} - {e}"
