@@ -65,7 +65,7 @@ done
 
 COMMANDS_FILE="/tmp/test_commands.txt"
 cat << EOF > $COMMANDS_FILE
-nxinit /home/bphillips/chopper.nxs
+nxinit /home/chopper.nxs
 nxtree
 nxfilename
 nxgetmode
